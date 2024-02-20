@@ -1,0 +1,36 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url "single-post-page" slug="itachi" %}"></a>
+        <div class="post__content">
+            <h3> uchiha itachi-</h3>
+            <div class="review-section">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating">5/5</span>
+            </div>
+            <p>
+            Itachi Uchiha is a character in the Naruto manga and anime series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the elder members of their clan, sparing only Sasuke.
+            </p>
+        </div>
+        <img src="{% static "blog/images/itachi.jpeg" %}" alt="anime">
+    </article>
+</li>
+
+<style>
+    .review-section {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        color: #FFD700;
+        /* Star color: gold */
+    }
+
+    .stars {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+</style>

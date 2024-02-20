@@ -1,0 +1,36 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url "single-post-page" slug="naruto" %}"></a>
+        <div class="post__content">
+            <h3>naruto -</h3>
+            <div class="review-section">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating">4/5</span>
+            </div>
+            <p>
+            Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.  
+            </p>
+        </div>
+        <img src="{% static "blog/images/naruto.jpeg" %}" alt="naruto">
+    </article>
+</li>
+
+<style>
+    .review-section {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        color: #FFD700;
+        /* Star color: gold */
+    }
+
+    .stars {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+</style>

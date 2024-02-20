@@ -2,38 +2,112 @@
 {% load static %}
 
 {% block title %}
-Selva's Blog Site
+  Prithvi's Anime Blog
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/index.css" %}">
-{% endblock %}
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #495057;
+      margin: 0;
+      padding: 0;
+    }
+
+    #welcome {
+      background-color: #6C757D;
+      color: #fff;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    #welcome img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #welcome h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    #latest-posts {
+      background-color: #343A40; /* Dark Blue/Grey */
+      color: #fff;
+      padding: 40px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    #latest-posts h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .post-list li {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 15px;
+    }
+
+    .post-list a {
+      color: #ff0000; /* Red */
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .post-list a:hover {
+      color: #fff; /* White */
+    }
+
+    .about {
+      background-color: #6C757D; /* Dark Grey */
+      color: #fff;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .about h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.2em;
+    }
+  </style>
+{% endblock css_files %}
 
 {% block content %}
-<section id="welcome">
+  <section id="welcome">
     <header>
-        <img src="{% static "blog/images/raju.jpg" %}" alt="Selva">
-        <h2>Selva</h2>
+      <img src="{% static "blog/images/animes.jpeg" %}" alt="prithvi">
+      <h2>Prithvi</h2>
     </header>
-    <p>
-        Hi, I am Selva and I love to cook healthy food
-    </p>
-</section>
+  </section>
 
-<section id="latest-posts">
-    <h2>My latest posts</h2>
-    <ul>
-        {% include "blog/includes/post.html" %}
+  <section id="latest-posts">
+    <h2>Must-Watch Animes</h2>
+    <ul class="post-list">
+      {% include "blog/includes/post.html" %}
     </ul>
-</section>
+  </section>
 
-<section class="about">
-    <h2>About Me</h2>
-    <p>
-        I love to write programs and love to cook.
-    </p>
-    <p>
-        My goal is to teach programming and help people with obesity and diabetes.
-    </p>
-</section>
+  <section class="about">
+    <h2>About this Page</h2>
+    <p>Explore the fascinating world of anime with Prithvi's recommendations. Find your next favorite series here!</p>
+  </section>
 {% endblock %}

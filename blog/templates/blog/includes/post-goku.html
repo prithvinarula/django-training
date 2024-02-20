@@ -1,0 +1,36 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url "single-post-page" slug="goku" %}"></a>
+        <div class="post__content">
+            <h3>about goku -</h3>
+            <div class="review-section">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating">5/5</span>
+            </div>
+            <p>
+                Son Goku, born Kakarot, is a male Saiyan and the main protagonist of the Dragon Ball metaseries created by Akira Toriyama. 
+            </p>
+        </div>
+        <img src="{% static "blog/images/goku.jpeg" %}" alt="goku">
+    </article>
+</li>
+
+<style>
+    .review-section {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        color: #FFD700;
+        /* Star color: gold */
+    }
+
+    .stars {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+</style>

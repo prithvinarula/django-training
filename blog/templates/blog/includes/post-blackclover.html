@@ -1,0 +1,77 @@
+{% load static %}
+
+<li class="post-item">
+    <article class="post">
+        <a href="{% url "single-post-page" slug="blackclover" %}">
+            <img src="{% static "blog/images/blackclover.png" %}" alt="anime">
+        </a>
+        <div class="post__content">
+            <h3>Black Clover</h3>
+            <div class="review-section">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="rating">4/5</div>
+            </div>
+            <p>
+                Black Clover is a Japanese manga series written and illustrated by Yūki Tabata.
+                It started in Shueisha's shōnen manga magazine Weekly Shōnen Jump in February 2015.
+                The series ran in the magazine until August 2023 and moved to Jump Giga in December of the same year.
+            </p>
+        </div>
+    </article>
+</li>
+
+<style>
+    .post-item {
+        list-style: none;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-out;
+    }
+
+    .post-item:hover {
+        transform: scale(1.02);
+    }
+
+    .post {
+        display: flex;
+    }
+
+    .post a {
+        flex: 0 0 30%;
+    }
+
+    .post img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .post__content {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .post__content h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .review-section {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        color: #FFD700; /* Star color: gold */
+    }
+
+    .stars {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+</style>
